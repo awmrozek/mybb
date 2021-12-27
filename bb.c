@@ -250,7 +250,7 @@ int bb(void)
 
 	    aa_resize (context);
 	    scene1();
-            messager("ADAM MROZEK known as AM, Tingle Notions, Dawn Music\nbirth: January 7 1993, Mszana, Poland, sex: male\n  2003 - Changed his Windows XP to red Hat Linux\n");
+            messager("ADAM MROZEK known as AM, Turb0, awmrozek\nbirth: January 7 1993, Mszana, Poland, sex: male\n  2003 - Changed his Windows XP to red Hat Linux\n");
 	    aa_resize (context);
 	    scene3();
 	    if (quitnow)
