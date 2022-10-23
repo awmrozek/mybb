@@ -41,7 +41,6 @@
 #define MAXEFECT2 (N_STEP*EFECT2*20-N_STEP)
 
 char *text;
-struct font *font;
 static int cursorx, cursory;
 void (*drawptr) ();
 
@@ -345,45 +344,68 @@ void scene1(void)
     aa_showcursor(context);
     textclrscr();
     clrscr();
-    text = "Please wait. Precalculating data";
+    text = "Starting. Please wait. Precalculating data";
     cursorx = cursory = 0;
     bright = 255;
     pos = delta = dist = 0;
     f = -10.0;
     randshift = randcharacters = randattrs = 0;
+    messager("randshift = randcharacters = randattrs = 0;");
     timestuff(-10, calculateslow, drawwait, ETIME1);
+    timestuff(-10, calculateslow, drawwait, ETIME1);
+    messager("timestuff(-10, calculateslow, drawwait, ETIME1);");
     timestuff(-40, calculateslow, drawwait, ETIME1);
+    messager("timestuff(-40, calculateslow, drawwait, ETIME1);");
     timestuff(-80, calculateslow, drawwait, ETIME1);
+    messager("timestuff(-80, calculateslow, drawwait, ETIME1);");
     timestuff(-30, calculatefast, drawwait, ETIME1);
+    messager("timestuff(-30, calculatefast, drawwait, ETIME1);");
     timestuff(-200, calculatefast, drawwait, ETIME1);
+    messager("timestuff(-200, calculatefast, drawwait, ETIME1);");
     timestuff(-420, calculatefast, drawwait, ETIME);
+    messager("timestuff(-420, calculatefast, drawwait, ETIME);");
     randshift = 1;
     timestuff(600, calculatefast, drawwait, ETIME1);
+    messager("timestuff(600, calculatefast, drawwait, ETIME1);");
     randshift = MAXSHIFT;
     params->randomval = MAXEFECT2 + 50;
     text = "";
     aa_gotoxy(context, 0, 0);
     aa_hidecursor(context);
     timestuff(20, calculatefastest, drawwait3, ETIME);
+    messager("timestuff(20, calculatefastest, drawwait3, ETIME);");
     timestuff(20, calculatefastest, drawwait3, ETIME);
+    messager("timestuff(20, calculatefastest, drawwait3, ETIME);");
     randcharacters = 1;
     timestuff(20, calculatefastest, drawwait3, ETIME);
+    messager("timestuff(20, calculatefastest, drawwait3, ETIME);");
     randcharacters = MAXRAND;
     randattrs = 1;
     timestuff(20, calculatefastest, drawwait3, ETIME);
+    messager("timestuff(20, calculatefastest, drawwait3, ETIME);");
     randattrs = MAXRAND;
     timestuff(20, calculatefastest, drawwait3, ETIME);
+    messager("timestuff(20, calculatefastest, drawwait3, ETIME);");
     drawptr = drawwait2;
     play();
+    messager("play();");
     timestuff(20, decrandom, draw, EFECT2 * 1000000);
+    messager("timestuff(20, decrandom, draw, EFECT2 * 1000000);");
     timestuff(20, decbright, draw, ETIME);
+    messager("timestuff(20, decbright, draw, ETIME);");
     pos = aa_imgheight(context) * 2;
     drawptr = drawwait4;
+    messager("MAKEPOS draw 5");
     timestuff(60, makepos, draw, 5 * 1000000);
+    messager("    timestuff(60, makepos, draw, 5 * 1000000);");
     timestuff(60, makepos1, draw, 0.2 * 1000000);
+    messager("timestuff(60, makepos1, draw, 0.2 * 1000000);");
     timestuff(60, makepos2, draw, 0.3 * 1000000);
+    messager("timestuff(60, makepos2, draw, 0.3 * 1000000);");
     drawptr = NULL;
     blazinec();
+    messager("blazinec();");
+    messager("ADAM MROZEK: End of Scene 1\n");
 }
 
 void introscreen(void)

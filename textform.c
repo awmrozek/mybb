@@ -8,7 +8,7 @@ static char *text = "#cWell we've reached the end of this demo. But #bnot#n the 
 "#bAA PROJECT#n is here. \n\n"
 "Please read curefully the following document for more information."
 "\n"
-"\n#b*** This IS the FINAL2 version of BB, modded by stroucki ***#n\n\n"
+"\n#b*** This IS the FINAL4 version of BB ***#n\n\n"
 "#bCHECK OUT http://aa-project.sourceforge.net/#n\n"
 "\n"
 "First of all\n\n"

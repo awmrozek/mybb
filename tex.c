@@ -44,8 +44,6 @@
 #define ArC 12000
 #define MaxFaces 500
 
-aa_context *context;
-aa_renderparams *params;
 typedef unsigned char byte;
 typedef unsigned short int word;
 typedef unsigned long dword;
@@ -94,7 +92,7 @@ void unset_zbuff()
 
 static inline void clear_zbuff()
 {
-    memset(zbuff, 0x55, (X_s * Y_s * sizeof(int)));
+    memset(zbuff, 0x55, (X_s * Y_s * sizeof(long)));
 }
 
 
